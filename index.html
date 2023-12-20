@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Soumik Bose Portfolio</title>
+
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/4N2Sw-pRC/profile-image.jpg">
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(45deg, #f06, #3498db);
+        background-size: 200% 200%;
+        animation: gradientAnimation 10s infinite;
+    }
+
+
+
+
+    header {
+        text-align: center;
+        background: linear-gradient(45deg, #3498db, #e74c3c);
+        color: #fff;
+        padding: 20px 0;
+
+    }
+
+
+
+
+    nav ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .content {
+        padding: 40px;
+        background: linear-gradient(45deg, #fff, #f0f0f0);
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 2s ease-out;
+    }
+
+    .project {
+        margin: 20px 0;
+        padding: 10px;
+        background: linear-gradient(45deg, #fff, #f0f0f0);
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .project {
+        margin: 20px 0;
+        padding: 10px;
+        background: linear-gradient(45deg, #fff, #f0f0f0);
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        position: relative;
+    }
+
+
+
+    .project button {
+        background: linear-gradient(45deg, #e74c3c, #3498db);
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .project button:hover {
+        background: linear-gradient(45deg, #3498db, #e74c3c);
+    }
+
+
+    .project1 {
+        margin: 20px 0;
+        padding: 10px;
+        background: linear-gradient(45deg, #fff, #f0f0f0);
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .project1 {
+        margin: 20px 0;
+        padding: 10px;
+        background: linear-gradient(45deg, #fff, #f0f0f0);
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        position: relative;
+    }
+
+
+
+    .project1 button {
+        background: linear-gradient(45deg, #e74c3c, #3498db);
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .project1 button:hover {
+        background: linear-gradient(45deg, #3498db, #e74c3c);
+    }
+
+    .modal-button {
+        background: linear-gradient(45deg, #3498db, #e74c3c);
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .modal-button:hover {
+        background: linear-gradient(45deg, #e74c3c, #3498db);
+    }
+
+    .modal-button1 {
+        background: linear-gradient(45deg, #3498db, #e74c3c);
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .modal-button1:hover {
+        background: linear-gradient(45deg, #e74c3c, #3498db);
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-content {
+        background: #fff;
+        padding: 20px;
+        width: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+    }
+
+    .close-button {
+        color: #555;
+        float: right;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+
+
+    }
+
+
+
+    #topNav {
+        margin-top: 1rem;
+    }
+
+    #Product {
+        height: 6rem;
+        width: 6rem;
+        margin-left: 1rem;
+    }
+
+    #project2 {
+        height: 6rem;
+        width: 14rem;
+        margin-left: 1rem;
+    }
+
+    /* Social media css */
+    textarea {
+        resize: none;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+
+    @charset "UTF-8";
+
+    .svg-inline--fa {
+        vertical-align: -0.200em;
+    }
+
+    .rounded-social-buttons {
+        text-align: center;
+    }
+
+    .rounded-social-buttons .social-button {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        width: 3.125rem;
+        height: 3.125rem;
+        border: 0.125rem solid transparent;
+        padding: 0;
+        text-decoration: none;
+        text-align: center;
+        color: #fefefe;
+        font-size: 1.5625rem;
+        font-weight: normal;
+        line-height: 2em;
+        border-radius: 1.6875rem;
+        transition: all 0.5s ease;
+        margin-right: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .rounded-social-buttons .social-button:hover,
+    .rounded-social-buttons .social-button:focus {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+    .rounded-social-buttons .fa-twitter,
+    .fa-facebook-f,
+    .fa-linkedin,
+    .fa-youtube,
+    .fa-instagram {
+        font-size: 25px;
+    }
+
+    .rounded-social-buttons .social-button.facebook {
+        background: #3b5998;
+    }
+
+    .rounded-social-buttons .social-button.facebook:hover,
+    .rounded-social-buttons .social-button.facebook:focus {
+        color: #3b5998;
+        background: #fefefe;
+        border-color: #3b5998;
+    }
+
+    .rounded-social-buttons .social-button.twitter {
+        background: #55acee;
+    }
+
+    .rounded-social-buttons .social-button.twitter:hover,
+    .rounded-social-buttons .social-button.twitter:focus {
+        color: #55acee;
+        background: #fefefe;
+        border-color: #55acee;
+    }
+
+    .rounded-social-buttons .social-button.linkedin {
+        background: #007bb5;
+    }
+
+    .rounded-social-buttons .social-button.linkedin:hover,
+    .rounded-social-buttons .social-button.linkedin:focus {
+        color: #007bb5;
+        background: #fefefe;
+        border-color: #007bb5;
+    }
+
+    .rounded-social-buttons .social-button.youtube {
+        background: black;
+    }
+
+    .rounded-social-buttons .social-button.youtube:hover,
+    .rounded-social-buttons .social-button.youtube:focus {
+        color: black;
+        background: #fefefe;
+        border-color: black;
+    }
+
+    .rounded-social-buttons .social-button.envelope {
+        background: red;
+    }
+
+    .rounded-social-buttons .social-button.envelope:hover,
+    .rounded-social-buttons .social-button.envelope:focus {
+        color: red;
+        background: #fefefe;
+        border-color: red;
+    }
+
+    .rounded-social-buttons .social-button.phone-square {
+        background: rgb(53, 11, 169);
+    }
+
+    .rounded-social-buttons .social-button.phone-square:hover,
+    .rounded-social-buttons .social-button.phone-square:focus {
+        color: rgb(53, 11, 169);
+        background: #fefefe;
+        border-color: rgb(53, 11, 169);
+    }
+
+    .rounded-social-buttons .social-button.instagram {
+        background: #125688;
+    }
+
+    .rounded-social-buttons .social-button.instagram:hover,
+    .rounded-social-buttons .social-button.instagram:focus {
+        color: #125688;
+        background: #fefefe;
+        border-color: #125688;
+    }
+
+    #Social {
+        margin-top: 1rem;
+    }
+
+    #googleCertificate {
+        height: 17rem;
+        width: 27rem;
+    }
+
+    #imgCertificate {
+        margin-left: -1rem;
+    }
+
+    #scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        font-size: 32px;
+        background: #ff9d00;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    #scroll-top span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -12px;
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #ffffff;
+    }
+
+    #scroll-top:hover {
+        transition: 0.3s;
+        box-shadow: 0 0 20px 4px #fff;
+    }
+
+
+
+    #contactForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .google-form {
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        padding-top: 75%;
+        /* Adjust the aspect ratio as needed */
+    }
+
+    .google-form iframe {
+        border: none;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .project-details {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+    }
+
+    .project.collapsible .project-details {
+        max-height: 1000px;
+        transition: max-height 0.4s ease-in;
+    }
+
+    .project-details1 {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+    }
+
+    .project1.collapsible .project-details1 {
+        max-height: 1000px;
+        transition: max-height 0.4s ease-in;
+    }
+
+    #modal1Btn {
+        margin-top: 1rem;
+    }
+
+    #project1 {
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-family: 'Helvetica', sans-serif;
+        /* Use a modern font */
+        color: #3498db;
+        /* Set a stylish color */
+        text-transform: uppercase;
+        /* Uppercase text for a modern look */
+        letter-spacing: 2px;
+        /* Add some letter spacing */
+        font-size: 26px;
+    }
+
+    h3 {
+        font-family: 'Helvetica', sans-serif;
+        /* Use a modern font */
+        color: #0772b9;
+        /* Set a stylish color */
+        letter-spacing: 2px;
+        /* Add some letter spacing */
+        font-weight: 600;
+        font-size: 24px
+    }
+
+    p {
+        font-family: 'Arial', sans-serif;
+        /* Use a clean and readable font */
+        color: #555;
+        /* Set a subdued text color */
+        line-height: 1.6;
+        /* Improve readability with increased line height */
+        font-size: 1.2em;
+        /* Adjust font size */
+    }
+
+    /* footer */
+    /* body {
+    background: #fbfbfd;
+} */
+
+    .new_footer_area {
+        background: #fbfbfd;
+    }
+
+
+    .new_footer_top {
+        padding: 120px 0px 270px;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .new_footer_area .footer_bottom {
+        padding-top: 5px;
+        padding-bottom: 50px;
+    }
+
+    .footer_bottom {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        color: #7f88a6;
+        padding: 27px 0px;
+    }
+
+    .new_footer_top .company_widget p {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 28px;
+        color: #6a7695;
+        margin-bottom: 20px;
+    }
+
+    .new_footer_top .company_widget .f_subscribe_two .btn_get {
+        border-width: 1px;
+        margin-top: 20px;
+    }
+
+    .btn_get_two:hover {
+        background: transparent;
+        color: #5e2ced;
+    }
+
+    .btn_get:hover {
+        color: #fff;
+        background: #6754e2;
+        border-color: #6754e2;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    a:hover,
+    a:focus,
+    .btn:hover,
+    .btn:focus,
+    button:hover,
+    button:focus {
+        text-decoration: none;
+        outline: none;
+    }
+
+
+
+    .new_footer_top .f_widget.about-widget .f_list li a:hover {
+        color: #5e2ced;
+    }
+
+    .new_footer_top .f_widget.about-widget .f_list li {
+        margin-bottom: 11px;
+    }
+
+    .f_widget.about-widget .f_list li:last-child {
+        margin-bottom: 0px;
+    }
+
+    .f_widget.about-widget .f_list li {
+        margin-bottom: 15px;
+    }
+
+    .f_widget.about-widget .f_list {
+        margin-bottom: 0px;
+    }
+
+    .new_footer_top .f_social_icon a {
+        width: 44px;
+        height: 44px;
+        line-height: 43px;
+        background: transparent;
+        border: 1px solid #e2e2eb;
+        font-size: 24px;
+    }
+
+    .f_social_icon a {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        font-size: 14px;
+        line-height: 45px;
+        color: #858da8;
+        display: inline-block;
+        background: #ebeef5;
+        text-align: center;
+        -webkit-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+
+    .ti-facebook:before {
+        content: "\e741";
+    }
+
+    .ti-twitter-alt:before {
+        content: "\e74b";
+    }
+
+    .ti-vimeo-alt:before {
+        content: "\e74a";
+    }
+
+    .ti-pinterest:before {
+        content: "\e731";
+    }
+
+    .btn_get_two {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: #5e2ced;
+        border-color: #5e2ced;
+        color: #fff;
+    }
+
+    .btn_get_two:hover {
+        background: transparent;
+        color: #5e2ced;
+    }
+
+    .new_footer_top .f_social_icon a:hover {
+        background: #5e2ced;
+        border-color: #5e2ced;
+        color: white;
+    }
+
+    .new_footer_top .f_social_icon a+a {
+        margin-left: 4px;
+    }
+
+    .new_footer_top .f-title {
+        margin-bottom: 30px;
+        color: #263b5e;
+    }
+
+    .f_600 {
+        font-weight: 600;
+    }
+
+    .f_size_18 {
+        font-size: 18px;
+    }
+
+    /* h1, h2, h3, h4, h5, h6 {
+    color: #4b505e;
+} */
+    .new_footer_top .f_widget.about-widget .f_list li a {
+        color: #6a7695;
+    }
+
+
+    .new_footer_top .footer_bg {
+        position: absolute;
+        bottom: 0;
+        background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+        width: 100%;
+        height: 266px;
+    }
+
+    .new_footer_top .footer_bg .footer_bg_one {
+        background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+        width: 330px;
+        height: 105px;
+        background-size: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+        -webkit-animation: myfirst 22s linear infinite;
+        animation: myfirst 22s linear infinite;
+    }
+
+    .new_footer_top .footer_bg .footer_bg_two {
+        background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+        width: 88px;
+        height: 100px;
+        background-size: 100%;
+        bottom: 0;
+        left: 38%;
+        position: absolute;
+        -webkit-animation: myfirst 30s linear infinite;
+        animation: myfirst 30s linear infinite;
+    }
+
+
+
+    @-moz-keyframes myfirst {
+        0% {
+            left: -25%;
+        }
+
+        100% {
+            left: 100%;
+        }
+    }
+
+    @-webkit-keyframes myfirst {
+        0% {
+            left: -25%;
+        }
+
+        100% {
+            left: 100%;
+        }
+    }
+
+    @keyframes myfirst {
+        0% {
+            left: -25%;
+        }
+
+        100% {
+            left: 100%;
+        }
+    }
+
+    /*************footer End*****************/
+
+    .happy-coding {
+        font-size: 24px;
+        color: #333;
+        position: relative;
+        animation: bounce 1s infinite alternate;
+    }
+
+    .heart-icon {
+        color: #e74c3c;
+        /* Red color for heart icon */
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+
+    }
+
+    .new_footer_area {
+
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .happy-coding {
+        font-size: 24px;
+        color: #e74c3c;
+        /* Red color for heart icon */
+        margin-bottom: 10px;
+    }
+
+    .copyright-text {
+        font-size: 14px;
+        color: #ccc;
+    }
+
+    .new_footer_area .footer_bottom {
+        margin-top: 1rem !important;
+
+    }
+
+    #name {
+        height: 2rem;
+    }
+
+    #designation {
+        height: 2rem;
+    }
+
+
+    #topNav a:hover {
+        color: #f1c40f;
+        
+    }
+
+    .project{
+        background: #f0f0f0;
+    }
+
+    .project1{
+        background: #f0f0f0;
+    }
+   
+</style>
+
+<body>
+    <div id="successToast" class="hidden bg-green-500 text-white px-6 py-4 rounded-md shadow-md fixed top-10 right-10">
+        Thank you for downloading my resume !!
+    </div>
+    <header>
+        <div class="w-32 h-32 mx-auto mb-2 rounded-full overflow-hidden">
+            <img src="https://i.postimg.cc/4N2Sw-pRC/profile-image.jpg" alt="Soumik Bose"
+                class="w-full h-full object-cover">
+        </div>
+
+        <div id="demo">
+            <h4 id="name" class="typewriter" value=" "></h4>
+
+            <h1 class="text-2xl font-bold" id="designation" class="typewriter" value=" "></h1>
+        </div>
+
+        <div class="rounded-social-buttons" id="Social">
+            <a class="social-button linkedin" href="https://www.linkedin.com/in/soumik-bose-1a7479167/"
+                target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a class="social-button youtube" href="https://github.com/SOUMIKBOSE560" target="_blank"><i
+                    class="fab fa-github"></i></a>
+            <a class="social-button envelope" href="mailto:soumikbose560@gmail.com"><i class="fa fa-envelope"
+                    aria-hidden="true"></i></a>
+            <a class="social-button phone-square" href="tel:+91-91237-81509"><i class="fa fa-phone-square"
+                    aria-hidden="true"></i></a>
+        </div>
+    </header>
+
+
+
+    <nav id="topNav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+    </nav>
+    <section id="about" class="content">
+        <h2>About Me</h2>
+        <p>I am a passionate web application developer with 2+ years of experience in Core JAVA , Spring Boot , Spring
+            MVC , JSP , SQL , Restful APIs , Hibernate and JPA and many more. When I'm not coding, I enjoy reading,
+            writing, and
+            exploring new technologies.</p>
+    </section>
+    <section id="projects" class="content">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1 (Company product)</h3>
+            <p>As a key contributor to the company product which is a cloud based CRM software similar to salesforce ,
+                pipedrive , ZOHO etc.
+                (can not say the product name due to professional reason )
+            </p>
+
+            <button id="proBtn1">Details</button>
+
+            <ul style="list-style-type: none; padding-left: 0;margin-top:1rem;" class="project-details">
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Spearheaded a comprehensive overhaul of the user interface module in a cloud-based CRM software,
+                    similar to Salesforce, using the powerful Syncfusion UI framework. This transformation elevated
+                    visual aesthetics and significantly enhanced the overall user experience, aligning with modern
+                    design principles.
+                </li>
+
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Modernized the application architecture by transitioning from traditional methods to a RESTful
+                    approach. This shift ensured scalability, maintainability, and seamless integration with other
+                    systems.
+                </li>
+
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Developed and implemented robust APIs to facilitate efficient communication between different
+                    modules of the application. This streamlined data flow and empowered the system with newfound
+                    flexibility.
+                </li>
+
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Played a pivotal role in the service layer, crafting functionalities for data persistence, editing,
+                    and deletion within Google Datastore. Navigated the intricacies of the Google Cloud environment,
+                    ensuring optimal performance and adhering to best practices for cloud-based data management.
+                </li>
+
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Responsiveness to client requests and proactive engagement in addressing evolving needs played a
+                    pivotal role in achieving high levels of client satisfaction. This collaborative approach fostered
+                    strong client relationships and significantly contributed to revenue generation through enhanced
+                    product capabilities.
+                </li>
+
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Overall contributions encompassed UI transformation, architectural modernization, API development,
+                    and seamless integration with Google Datastore. This holistic approach positioned the company
+                    product as a cutting-edge and competitive solution in the market.
+                </li>
+                <div id="modal1Btn">
+                    <button class="modal-button" data-modal="modal1">Tools & Technologies</button>
+                </div>
+            </ul>
+
+
+        </div>
+        <div class="project1">
+            <h3>Project 2 (Client project)</h3>
+            <p>As a seasoned professional, I have actively contributed to the success of an Ecommerce projects (mostly)
+                by taking on diverse roles and responsibilities.
+            </p>
+
+
+
+            <button class="modal-project" id="proBtn2" style="margin-bottom:1rem">Details</button>
+
+
+            <ul style="list-style-type: none; padding-left: 0;" class="project-details1">
+                <h3>Ecommerce Project Contributions:</h3>
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Actively contributed to the success of Ecommerce projects by taking on diverse roles and
+                    responsibilities.
+                </li>
+
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Designed and built robust product components using JavaScript and jQuery for a seamless and dynamic
+                    user interface.
+                </li>
+
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Crafted reliable and efficient code in Java, Spring Boot, and Spring MVC for the backend of the
+                    application.
+                </li>
+
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Integrated Syncfusion UI components to enhance visual aesthetics and user experience.
+                </li>
+
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Used google bucket to upload product images.
+                </li>
+
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Successfully integrated Razorpay for secure payment processing, streamlining the ecommerce platform
+                    and fostering trust among users.
+                </li>
+
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Meticulously designed and implemented the user interface using HTML, CSS, and JavaScript for an
+                    intuitive and visually appealing experience.
+                </li>
+
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Utilized Google Cloud Platform's Datastore for efficient and scalable backend data storage.
+                </li>
+
+                <li style="margin-bottom: 10px;">
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Introduced an innovative express and standard delivery system, providing users with flexible
+                    shipping options.
+                </li>
+
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>
+                    Consistently demonstrated commitment to driving success through strategic modifications, integration
+                    of new technologies, and a relentless pursuit of excellence in dynamic and competitive business
+                    environments.
+                </li>
+                <div>
+                    <button class="modal-button" data-modal="modal2" style="margin-top:1rem">Tools &
+                        Technologies</button>
+                </div>
+            </ul>
+
+
+        </div>
+    </section>
+
+    <section id="certificates" class="content">
+        <h2>My certificates</h2>
+        <div id="imgCertificate">
+            <img src="https://i.postimg.cc/FFJqg0rR/Google-professional-cloud-developer-page-0001.jpg"
+                id="googleCertificate" alt="">
+        </div>
+
+
+    </section>
+
+
+    <section id="resume" class="content">
+        <h2>My resume</h2>
+        <button class="modal-button1" data-modal="modal2" id="downloadResume"
+            onclick="downloadResume()">Download</button>
+
+
+    </section>
+
+    <section id="contact" class="content">
+
+
+        <div id="contactForm" class="content">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLScRU4-fI0waUPhol_9ywVkFS-IVwr0Knsg0d4UF--lHBNKYSA/viewform?embedded=true"
+                width="640" height="986" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- Modals for Project Details -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="modal1">&times;</span>
+            <h2>Project 1</h2>
+            <p>Technologies I have used on this project (CRM software)</p>
+            <ul>
+
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>JAVA
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Spring Boot
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Redis
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Spring MVC
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>JSP
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>HTML
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>CSS
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>JS
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Jquery
+                </li>
+                <div
+                    style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                </div>Spring Security
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Third Party APIs
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Google datastore
+                </li>
+
+            </ul>
+            <img src="https://th.bing.com/th/id/OIP.Duh92iAxphpxkdQQDtBg0QHaHa?rs=1&pid=ImgDetMain" alt="Project 1"
+                id="Product">
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="modal2">&times;</span>
+            <h2>Project 2 (Ecommerce project)</h2>
+            <p>Technologies I have used on this project</p>
+            <ul>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>JAVA
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Spring Boot
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Redis
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Spring MVC
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>JSP
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>HTML
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>CSS
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Bootstrap
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Fontawesome
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>JS
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Jquery
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Third Party APIs
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Google datastore
+                </li>
+                <li>
+                    <div
+                        style="display: inline-block; width: 10px; height: 10px; background-color: #007bff; border-radius: 50%; margin-right: 10px;">
+                    </div>Google bucket
+                </li>
+            </ul>
+
+            <img src="https://th.bing.com/th/id/OIP.A37E98taZnDTHecD8kKnDgHaDQ?w=278&h=154&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                alt="Project 2" id="project2">
+        </div>
+    </div>
+
+    <a id="scroll-top" style="display: none;"><span></span></a>
+
+    <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="f_widget company_widget wow fadeIn" data-wow-delay="0.2s">
+                            <h3 class="f-title f_600 t_color f_size_18 happy-coding">
+                                <span class="heart-icon">❤️</span> Happy Coding <span class="heart-icon">❤️</span>
+                            </h3>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bg">
+                <div class="footer_bg_one"></div>
+                <div class="footer_bg_two"></div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12 col-sm-12">
+                        <p class="mb-0 f_400">© Soumik Bose.2023 All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const modalButtons = document.querySelectorAll('.modal-button');
+
+        modalButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const modalId = button.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+
+                if (modal) {
+                    modal.style.display = 'block';
+
+                    // Close modal when clicking the close button
+                    const closeButtons = modal.getElementsByClassName('close-button');
+                    if (closeButtons[0]) {
+                        closeButtons[0].addEventListener('click', function () {
+                            modal.style.display = 'none';
+                        });
+                    }
+                }
+            });
+        });
+    });
+
+    function downloadResume() {
+
+        var downloadLink = document.createElement('a');
+        downloadLink.href = "https://drive.google.com/uc?export=download&id=1pXvMafhBLAJGfeL4TdefVmVGJwxZQ6FJ";
+
+
+        downloadLink.click();
+
+
+        document.getElementById('successToast').classList.remove('hidden');
+
+
+        setTimeout(function () {
+            document.getElementById('successToast').classList.add('hidden');
+        }, 4500);
+    }
+
+    $(document).ready(function () {
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $("#scroll-top").fadeIn();
+            } else {
+                $("#scroll-top").fadeOut();
+            }
+        });
+        $("#scroll-top").click(function () {
+            $("html, body").animate({ scrollTop: 0 }, 500);
+            return false;
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var project = document.querySelector(".project");
+        var projectDetails = project.querySelector(".project-details");
+
+        project.querySelector("#proBtn1").addEventListener("click", function () {
+            project.classList.toggle("collapsible");
+        });
+
+        //project 2
+
+        var project1 = document.querySelector(".project1");
+        var projectDetails1 = project1.querySelector(".project-details1");
+
+        project1.querySelector("#proBtn2").addEventListener("click", function () {
+            project1.classList.toggle("collapsible");
+        });
+
+
+    });
+
+    function startTypingAnimation() {
+        const nameElement = document.getElementById("name");
+        const designationElement = document.getElementById("designation");
+
+        function typeText(element, text, index) {
+            if (index <= text.length) {
+                element.innerHTML = text.substring(0, index);
+                setTimeout(function () {
+                    typeText(element, text, index + 1);
+                }, 50); // Adjust the delay between characters as needed
+            }
+        }
+
+        // Start typing when the page loads
+        typeText(nameElement, "Soumik Bose", 0);
+        setTimeout(function () {
+            typeText(designationElement, "Web Application Developer", 0);
+        }, 1500); // Delay before starting the second animation
+    }
+
+    // Start the typing animation and repeat after a 2-second delay
+    startTypingAnimation();
+    setInterval(startTypingAnimation, 6000);
+
+
+
+</script>
+
+</html>
